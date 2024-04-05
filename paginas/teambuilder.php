@@ -1,10 +1,10 @@
 <?php include("../include/extra.inc.php") ?>
 
-<?php head2HTML(); ?>
+<?php headHTML(); ?>
 
 <body class="bg-dark">
 
-    <?php header2HTML(); ?>
+    <?php headerHTML(); ?>
 
     <main>
         <section class="container text-center mt-3">

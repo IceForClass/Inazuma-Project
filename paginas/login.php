@@ -1,9 +1,9 @@
 <?php include("../include/extra.inc.php"); ?>
 
-<?php head2HTML(); ?>
+<?php headHTML(); ?>
 
 <body id="body" class="bg-dark">
-    <?php header2HTML(); ?>
+    <?php headerHTML(); ?>
     <main>
         <!--Estilo para nada sacado de bootstrap-->
         <section class="h-100 gradient-form">
@@ -49,10 +49,9 @@
           
                         </div>
                       </div>
-                      <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                      <div class="col-lg-6 d-flex align-items-center gradient-custom-2 text-center">
                         <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                            <h4 class="mb-4">Explora el fascinante mundo de los Pocket Monsters</h4>
-                            <p class="small mb-0">Sumérgete en la aventura de capturar y entrenar a estos increíbles seres. Descubre sus habilidades únicas y desafía a otros entrenadores en tu camino hacia la maestría en el Pocket Monster Dex.</p>                            
+                            <h4 class="mb-4">¡Bienvenido al mundo de inazuma!</h4>
                         </div>
                       </div>
                     </div>
@@ -63,73 +62,7 @@
           </section>
     </main>
 
-    <footer class="text-center bg-light">
-        <!-- Grid container -->
-        <div class="container">
-          <!-- Section: Social media -->
-          <section>
-            <!-- Facebook -->
-            <a
-              data-mdb-ripple-init
-              class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
-              role="button"
-              data-mdb-ripple-color="dark"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-      
-            <!-- Twitter -->
-            <a
-              data-mdb-ripple-init
-              class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
-              role="button"
-              data-mdb-ripple-color="dark"
-              ><i class="fab fa-twitter"></i
-            ></a>
-      
-            <!-- Google -->
-            <a
-              data-mdb-ripple-init
-              class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
-              role="button"
-              data-mdb-ripple-color="dark"
-              ><i class="fab fa-google"></i
-            ></a>
-      
-            <!-- Instagram -->
-            <a
-              data-mdb-ripple-init
-              class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
-              role="button"
-              data-mdb-ripple-color="dark"
-              ><i class="fab fa-instagram"></i
-            ></a>
-      
-            <!-- Linkedin -->
-            <a
-              data-mdb-ripple-init
-              class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
-              role="button"
-              data-mdb-ripple-color="dark"
-              ><i class="fab fa-linkedin"></i
-            ></a>
-            <!-- Github -->
-            <a
-              data-mdb-ripple-init
-              class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="https://github.com/IceForClass/Pocket-Monster-Dex"
-              role="button"
-              data-mdb-ripple-color="dark"
-              ><i class="fab fa-github"></i
-            ></a>
-          </section>
-          <!-- Section: Social media -->
-        </div>
-      </footer>
+    <?php footerHTML(); ?>
     <script src="/archivo.js"></script>
 </body>
 </html>
