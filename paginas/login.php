@@ -42,7 +42,7 @@
           
                             <div class="d-flex align-items-center justify-content-center pb-4">
                               <p class="mb-0 me-2"> ¿No tienes una cuenta?</p>
-                              <button type="button" class="btn btn-outline-danger">Crea una nueva</button>
+                              <a href="signup.php" class="btn btn-outline-danger">Crea una nueva</a>
                             </div>
           
                           </form>

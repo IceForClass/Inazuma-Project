@@ -8,7 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ie</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="CSS/style.css">
+    <script src="js/script.js"></script>
   </head>
 
 <?php } ?>
@@ -19,12 +21,12 @@
   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
 
     <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0">
-      <img src="Imagenes/logo.png" alt="Logo" width="80" height="80">
+      <img src="/Imagenes/logo.png" alt="Logo" width="80" height="80">
     </a>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-      <li><a href="#" class="nav-link px-2 link-light">Features</a></li>
+      <li><a href="/index.php" class="nav-link px-2 link-light">Home</a></li>
+      <li><a href="/paginas/equipos.php" class="nav-link px-2 link-light">Equipos</a></li>
       <li><a href="#" class="nav-link px-2 link-light">Pricing</a></li>
       <li><a href="#" class="nav-link px-2 link-light">FAQs</a></li>
       <li><a href="#" class="nav-link px-2 link-light">About</a></li>
@@ -32,7 +34,7 @@
 
     <div class="col-md-3 text-end">
       <a href="paginas/login.php" class="btn btn-outline-primary me-2">Login</a>
-      <button type="button" class="btn btn-primary">Sign-up</button>
+      <a href="paginas/signup.php" class="btn btn-outline-primary me-2">Sign-up</a>
     </div>
   </header>
 
@@ -43,7 +45,7 @@
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
       <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0">
-        <img src="Imagenes/logo.png" alt="Logo" width="80" height="80">
+        <img src="/Imagenes/logo.png" alt="Logo" width="80" height="80">
       </a>
     </div>
     <div class="text-center">
