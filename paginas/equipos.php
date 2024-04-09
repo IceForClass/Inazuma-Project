@@ -11,7 +11,7 @@
         <div class="container mt-3 text-center">
             <h2 class="text-white">Todos Los Equipos</h2>
             <h3 class="text-white">Alius Master</h3>
-            <a href="#demo" class="btn btn-primary" data-bs-toggle="collapse">Ver Equipo</a>
+            <a href="#demo" class="btn btn-primary mb-3" data-bs-toggle="collapse">Ver Equipo</a>
             <div id="demo" class="collapse">
                 <div class="row text-white d-flex justify-content-center">
                     <figure class="col-md-3 mx-1">
