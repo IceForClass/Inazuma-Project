@@ -76,6 +76,10 @@
                     </figure>
                 </div>
             </div>
+
+            <h3 class="text-white">Inazuma All Stars</h3>
+            
+            <h3 class="text-white">Campeones Nacionales</h3>
         </div>
     </main>
 
