@@ -1,8 +1,8 @@
 drop database if exists inazuma;
+
 create database inazuma;
 
 use inazuma;
-
 
 create table jugadores(
 	id int primary key auto_increment,
@@ -20,8 +20,7 @@ create table jugadores(
     TOTAL int unsigned
 );
 
-INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONTROL, INTELIGENCIA, PRESIÓN, AGILIDAD, FÍSICO, TOTAL)
-VALUES
+INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONTROL, INTELIGENCIA, PRESIÓN, AGILIDAD, FÍSICO, TOTAL) VALUES
   ("Bomber", "Defensa", "Aire", "Prominence",66, 92, 112, 120, 152, 122, 96, 760),
   ("Bellatrix", "Delantero", "Aire", "Génesis", 136, 158, 106, 112, 114, 88, 86, 800),
   ("Clear", "Defensa", "Aire", "Polvo De Diamantes", 66, 92, 112, 120, 152, 122, 96, 760),
@@ -37,4 +36,5 @@ VALUES
   ("Xene", "Delantero", "Fuego", "Génesis",164, 118, 138, 104, 76, 98, 100, 798),
   ("Zell", "Delantero", "Aire", "Epsilon",148, 124, 116, 86, 84, 96, 108, 762),
   ("Zohen", "Defensa", "Montaña", "Génesis",68, 106, 90, 72, 166, 90, 128, 720);  
+  
 select * from jugadores;
