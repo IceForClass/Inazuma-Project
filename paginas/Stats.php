@@ -18,13 +18,14 @@
     <main>
         <div class="container d-flex justify-content-center">
             <div class="table-responsive">
-                <table class="table table-dark table-striped table-bordered">
+                <table class="table table-dark table-striped table-bordered text-center rounded">
                     <thead>
                         <!--Cabeza de la tabla-->
                         <tr>
                             <th scope="col">Nombre</th>
                             <th scope="col">Posición</th>
                             <th scope="col">Afinidad</th>
+                            <th scope="col">Equipo</th>
                             <th scope="col">PATADA</th>
                             <th scope="col">TÉCNICA</th>
                             <th scope="col">CONTROL</th>
@@ -43,6 +44,7 @@
                                 echo "<td>" . $registro["Nombre"] . "</td>";
                                 echo "<td>" . $registro["Posición"] . "</td>";
                                 echo "<td>" . $registro["Afinidad"] . "</td>";
+                                echo "<td>" . $registro["Equipo"] . "</td>";
                                 echo "<td>" . $registro["PATADA"] . "</td>";
                                 echo "<td>" . $registro["TÉCNICA"] . "</td>";
                                 echo "<td>" . $registro["CONTROL"] . "</td>";
