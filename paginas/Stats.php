@@ -3,13 +3,24 @@
 <?php headHTML(); ?>
 
 <body class="bg-dark">
-    <?php headerHTML(); ?>
+    <?php headerHTML(); 
+    
+    $mysql = new mysqli("localhost", "root", "", "", 3307); // XAMPP
+
+    $mysql->select_db("inazuma");
+    $consulta = "SELECT * FROM jugadores";
+
+    $tabla_equipos = $mysql->query($consulta);
+
+
+    ?>
 
     <main>
         <div class="container d-flex justify-content-center">
             <div class="table-responsive">
                 <table class="table table-dark table-striped table-bordered">
                     <thead>
+                        <!--Cabeza de la tabla-->
                         <tr>
                             <th scope="col">Nombre</th>
                             <th scope="col">Posición</th>
@@ -25,33 +36,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Nombre jugador 1</td>
-                            <td>Posición jugador 1</td>
-                            <td>Afinidad jugador 1</td>
-                            <td>PATADA jugador 1</td>
-                            <td>TÉCNICA jugador 1</td>
-                            <td>CONTROL jugador 1</td>
-                            <td>INTELIGENCIA jugador 1</td>
-                            <td>PRESIÓN jugador 1</td>
-                            <td>AGILIDAD jugador 1</td>
-                            <td>FÍSICO jugador 1</td>
-                            <td>TOTAL jugador 1</td>
-                        </tr>
-                        <!-- Puedes agregar más filas según sea necesario -->
-                        <tr>
-                            <td>Nombre jugador 2</td>
-                            <td>Posición jugador 2</td>
-                            <td>Afinidad jugador 2</td>
-                            <td>PATADA jugador 2</td>
-                            <td>TÉCNICA jugador 2</td>
-                            <td>CONTROL jugador 2</td>
-                            <td>INTELIGENCIA jugador 2</td>
-                            <td>PRESIÓN jugador 2</td>
-                            <td>AGILIDAD jugador 2</td>
-                            <td>FÍSICO jugador 2</td>
-                            <td>TOTAL jugador 2</td>
-                        </tr>
+                        <!--Cuerpo de la tabla-->
+                        <?php
+                            while ($registro = $tabla_equipos->fetch_assoc()) {
+                                echo "<tr>";
+                                echo "<td>" . $registro["Nombre"] . "</td>";
+                                echo "<td>" . $registro["Posición"] . "</td>";
+                                echo "<td>" . $registro["Afinidad"] . "</td>";
+                                echo "<td>" . $registro["PATADA"] . "</td>";
+                                echo "<td>" . $registro["TÉCNICA"] . "</td>";
+                                echo "<td>" . $registro["CONTROL"] . "</td>";
+                                echo "<td>" . $registro["INTELIGENCIA"] . "</td>";
+                                echo "<td>" . $registro["PRESIÓN"] . "</td>";
+                                echo "<td>" . $registro["AGILIDAD"] . "</td>";
+                                echo "<td>" . $registro["FÍSICO"] . "</td>";
+                                echo "<td>" . $registro["TOTAL"] . "</td>";
+                            echo "</tr>";
+                        }
+                        ?>
+
                     </tbody>
                 </table>
             </div>
