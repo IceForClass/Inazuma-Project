@@ -18,7 +18,7 @@
     <main>
         <div class="container d-flex justify-content-center">
             <div class="table-responsive">
-                <table class="table table-dark table-striped table-bordered text-center rounded">
+                <table class="table table-dark table-striped table-bordered text-center align-middle">
                     <thead>
                         <!--Cabeza de la tabla-->
                         <tr>
