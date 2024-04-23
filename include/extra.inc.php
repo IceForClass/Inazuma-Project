@@ -22,9 +22,9 @@
     </a>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="/" class="nav-link px-2 link-light">Home</a></li>
-      <li><a href="/paginas/equipos.php" class="nav-link px-2 link-light">Equipos</a></li>
-      <li><a href="/paginas/Stats.php" class="nav-link px-2 link-light">Stats</a></li>
+      <li><a href="../index.php" class="nav-link px-2 link-light">Home</a></li>
+      <li><a href="equipos.php" class="nav-link px-2 link-light">Equipos</a></li>
+      <li><a href="Stats.php" class="nav-link px-2 link-light">Stats</a></li>
       <li><a href="#" class="nav-link px-2 link-light">FAQs</a></li>
       <li><a href="#" class="nav-link px-2 link-light">About</a></li>
     </ul>
