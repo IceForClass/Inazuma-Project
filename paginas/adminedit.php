@@ -6,7 +6,7 @@
 <body class="bg-dark">
     <?php headerHTML();
     $mysql = connectDB();
-    $consulta = "SELECT * FROM jugadores";
+    $consulta = "SELECT * FROM jugadores order by Nombre";
     $tabla_equipos = $mysql->query($consulta);
     ?>
 
@@ -17,6 +17,7 @@
                     <thead>
                         <!--Cabeza de la tabla-->
                         <tr>
+                            <th scope="col">jugador</a></th>
                             <th scope="col">Nombre</a></th>
                             <th scope="col">Posición</a></th>
                             <th scope="col">Afinidad</a></th>
@@ -37,6 +38,7 @@
                         while ($registro = $tabla_equipos->fetch_assoc()) {
                             ?>
                             <tr>
+                            <td><img src="../Imagenes/Alius/<?php echo $registro["Nombre"] ?>.png" alt="<?php echo $registro["Nombre"] ?>" width=100% height=100%></td>
                             <td> <?php echo $registro["Nombre"] ?> </td>
                             <td> <?php echo $registro["Posición"] ?> </td>
                             <td> <?php echo $registro["Afinidad"] ?> </td>
@@ -49,10 +51,17 @@
                             <td> <?php echo $registro["AGILIDAD"] ?> </td>
                             <td> <?php echo $registro["FÍSICO"] ?> </td>
                             <td> <?php echo $registro["TOTAL"] ?> </td>
-                            <td>                       </td>                                              
+                            <td>
+                                <div class="row container mx-auto">
+                                    <a href="../include/stats_view.php?id=<?php echo $registro["id"]?>"class="btn btn-primary mb-2">Ver</a>
+                                    <a href="../include/stats_update.php?id=<?php echo $registro["id"]?>" class="btn btn-warning mb-2">Editar</a>
+                                    <a href="../include/stats_borrar.php?id=<?php echo $registro["id"]?>" class="btn btn-danger">Borrar</a>     
+                                </div>                                        
+                            </td>                                              
                             </tr>
                         <?php
                         }
+                        
                         ?>
                     </tbody>
                 </table>

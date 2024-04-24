@@ -1,8 +1,7 @@
 <?php include("connect.inc.php") ?>
 
 <?php
-function order(){
-    $mysql = connectDB(); //Esto da un error diciendo que ya está definida la base de datos
+function order($mysql){
     if (!isset($_GET["orderby"])) {
         $consulta = "SELECT * FROM jugadores";
         $tabla_equipos = $mysql->query($consulta);

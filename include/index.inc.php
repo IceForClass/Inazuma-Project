@@ -21,20 +21,20 @@
   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
 
     <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0">
-      <img src="/Imagenes/logo.png" alt="Logo" width="80" height="80">
+      <img src="../Imagenes/logo.png" alt="Logo" width="80" height="80">
     </a>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="index.php" class="nav-link px-2 link-light">Home</a></li>
-      <li><a href="paginas/equipos.php" class="nav-link px-2 link-light">Equipos</a></li>
-      <li><a href="paginas/Stats.php" class="nav-link px-2 link-light">Stats</a></li>
+      <li><a href="../index.php" class="nav-link px-2 link-light">Home</a></li>
+      <li><a href="equipos.php" class="nav-link px-2 link-light">Equipos</a></li>
+      <li><a href="Stats.php" class="nav-link px-2 link-light">Stats</a></li>
       <li><a href="#" class="nav-link px-2 link-light">FAQs</a></li>
       <li><a href="#" class="nav-link px-2 link-light">About</a></li>
     </ul>
 
     <div class="col-md-3 text-end">
-      <a href="paginas/login.php" class="btn btn-outline-primary me-2">Login</a>
-      <a href="paginas/signup.php" class="btn btn-outline-primary me-2">Sign-up</a>
+      <a href="adminedit.php" class="btn btn-outline-primary me-2">Login</a>
+      <a href="../paginas/signup.php" class="btn btn-outline-primary me-2">Sign-up</a>
     </div>
   </header>
 

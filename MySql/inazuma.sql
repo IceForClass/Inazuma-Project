@@ -5,18 +5,18 @@ create database inazuma;
 use inazuma;
 
 create table jugadores(
-	id int primary key auto_increment,
-    Nombre varchar(35),
-    Posición enum("Delantero","Centrocampista","Defensa","Portero"),
-    Afinidad enum("Aire","Fuego","Bosque","Montaña"),
-    Equipo varchar(25),
-    PATADA	tinyint unsigned,
-    TÉCNICA	tinyint unsigned,
-    CONTROL	tinyint unsigned, 
-    INTELIGENCIA tinyint unsigned, 
-    PRESIÓN	tinyint unsigned, 
-    AGILIDAD tinyint unsigned,	
-    FÍSICO tinyint unsigned,
+	id int primary key auto_increment not null,
+    Nombre varchar(35) not null,
+    Posición enum("Delantero","Centrocampista","Defensa","Portero") not null,
+    Afinidad enum("Aire","Fuego","Bosque","Montaña") not null,
+    Equipo varchar(25) not null,
+    PATADA	tinyint unsigned not null,
+    TÉCNICA	tinyint unsigned not null,
+    CONTROL	tinyint unsigned not null, 
+    INTELIGENCIA tinyint unsigned not null, 
+    PRESIÓN	tinyint unsigned not null, 
+    AGILIDAD tinyint unsigned not null, 	
+    FÍSICO tinyint unsigned not null,
     TOTAL int unsigned
 );
 
@@ -29,7 +29,7 @@ INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONT
   ("Gocker", "Defensa", "Montaña", "Polvo De Diamantes",80, 70, 86, 112, 160, 84, 126, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO),
   ("Icer", "Centrocampista", "Aire", "Polvo De Diamantes",74, 148, 100, 90, 100, 118, 88, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO),
   ("Janus", "Centrocampista", "Bosque", "Tormenta De Géminis",146, 148, 126, 88, 84, 96, 74, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO),
-  ("Kormer", "Centrocampista", "Aire", "Génesis",116, 142, 128, 106, 84, 94, 90, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO),
+  ("Korner", "Centrocampista", "Aire", "Génesis",116, 142, 128, 106, 84, 94, 90, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO),
   ("Lean", "Centrocampista", "Fuego", "Prominence",88, 146, 114, 110, 112, 90, 98, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO),
   ("Neppten", "Delantero", "Bosque", "Prominence",162, 124, 116, 94, 78, 84, 102, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO),
   ("Torch", "Delantero", "Fuego", "Prominence",184, 146, 132, 68, 78, 90, 102, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO),

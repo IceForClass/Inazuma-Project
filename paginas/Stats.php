@@ -1,4 +1,4 @@
-<?php include("../include/extra.inc.php") ?>
+<?php include("../include/index.inc.php") ?>
 <?php include("../include/connect.inc.php") ?>
 <?php // include("../include/stats.inc.php") ?>
 
@@ -7,7 +7,7 @@
 <body class="bg-dark">
     <?php headerHTML();
     $mysql = connectDB();
-    // order(); Esta cosa todavía no funciona así que no se puede refactorizar aún
+    // order($mysql); Esta cosa todavía no funciona así que no se puede refactorizar aún
 
     if (!isset($_GET["orderby"])) {
         $consulta = "SELECT * FROM jugadores";
