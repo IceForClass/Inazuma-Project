@@ -3,16 +3,7 @@
 
 <?php headHTML(); ?>
 
-<?php
-if (!isset($_GET["id"])) {
-    header("location:../paginas/adminedit.php");
-} else {
-    $consulta = "SELECT * FROM jugadores WHERE id=" . $_GET["id"];
-    $mysql = connectDB();
-    $tabla = $mysql->query($consulta);
-}
 
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -30,63 +21,57 @@ if (!isset($_GET["id"])) {
         <div class="text-white container border">
             <h1 class="text-center">Modificar Jugador</h1>
             <hr>
-            <?php
-            while ($registro = $tabla->fetch_assoc()) {
-            ?>
-                <form method="POST" action="stats_sql.php?opcion=update&id=<?php echo $registro["id"] ?>">
+                <form method="POST" action="stats_sql.php?opcion=add">
                     <div class="mb-3">
                         <label for="marca" class="form-label">Nombre</label>
-                        <input type="text" class="form-control" id="Nombre" name="Nombre" value="<?php echo $registro["Nombre"] ?>">
+                        <input type="text" class="form-control" id="Nombre" name="Nombre" value="">
                     </div>
                     <div class="mb-3">
                         <label for="modelo" class="form-label">Posición</label>
-                        <input type="text" class="form-control" id="Posición" name="Posición" value="<?php echo $registro["Posición"] ?>">
+                        <input type="text" class="form-control" id="Posición" name="Posición" value="">
                     </div>
                     <div class="mb-3">
                         <label for="precio" class="form-label">Afinidad</label>
-                        <input type="text" class="form-control" id="Afinidad" name="Afinidad" value="<?php echo $registro["Afinidad"] ?>">
+                        <input type="text" class="form-control" id="Afinidad" name="Afinidad" value="">
                     </div>
                     <div class="mb-3">
                         <label for="potencia" class="form-label">Equipo</label>
-                        <input type="text" class="form-control" id="Equipo" name="Equipo" value="<?php echo $registro["Equipo"] ?>">
+                        <input type="text" class="form-control" id="Equipo" name="Equipo" value="">
                     </div>
                     <div class="mb-3">
                         <label for="maletero" class="form-label">PATADA</label>
-                        <input type="text" class="form-control" id="PATADA" name="PATADA" value="<?php echo $registro["PATADA"] ?>">
+                        <input type="text" class="form-control" id="PATADA" name="PATADA" value="">
                     </div>
                     <div class="mb-3">
                         <label for="imagen" class="form-label">TÉCNICA</label>
-                        <input type="text" class="form-control" id="TÉCNICA" name="TÉCNICA" value="<?php echo $registro["TÉCNICA"] ?>">
+                        <input type="text" class="form-control" id="TÉCNICA" name="TÉCNICA" value="">
                     </div>
                     <div class="mb-3">
                         <label for="imagen" class="form-label">CONTROL</label>
-                        <input type="text" class="form-control" id="CONTROL" name="CONTROL" value="<?php echo $registro["CONTROL"] ?>">
+                        <input type="text" class="form-control" id="CONTROL" name="CONTROL" value="">
                     </div>
                     <div class="mb-3">
                         <label for="imagen" class="form-label">INTELIGENCIA</label>
-                        <input type="text" class="form-control" id="INTELIGENCIA" name="INTELIGENCIA" value="<?php echo $registro["INTELIGENCIA"] ?>">
+                        <input type="text" class="form-control" id="INTELIGENCIA" name="INTELIGENCIA" value="">
                     </div>
                     <div class="mb-3">
                         <label for="imagen" class="form-label">PRESIÓN</label>
-                        <input type="text" class="form-control" id="PRESIÓN" name="PRESIÓN" value="<?php echo $registro["PRESIÓN"] ?>">
+                        <input type="text" class="form-control" id="PRESIÓN" name="PRESIÓN" value="">
                     </div>
                     <div class="mb-3">
                         <label for="imagen" class="form-label">AGILIDAD</label>
-                        <input type="text" class="form-control" id="AGILIDAD" name="AGILIDAD" value="<?php echo $registro["AGILIDAD"] ?>">
+                        <input type="text" class="form-control" id="AGILIDAD" name="AGILIDAD" value="">
                     </div>
                     <div class="mb-3">
                         <label for="imagen" class="form-label">FÍSICO</label>
-                        <input type="text" class="form-control" id="FÍSICO" name="FÍSICO" value="<?php echo $registro["FÍSICO"] ?>">
+                        <input type="text" class="form-control" id="FÍSICO" name="FÍSICO" value="">
                     </div>
                     <div class="mb-3">
                         <label for="imagen" class="form-label">Descripcion</label>
-                        <input type="text" class="form-control" id="Descripcion" name="Descripcion" value="<?php echo $registro["Descripcion"] ?>">
+                        <input type="text" class="form-control" id="Descripcion" name="Descripcion" value="">
                     </div>
                     <button type="submit" class="btn btn-primary">Aplicar cambios</button>
                     <a href="../paginas/adminedit.php" class="btn btn-danger">Volver al listado</a>
-                <?php
-            }
-                ?>
                 </form>
         </div>
     </main>

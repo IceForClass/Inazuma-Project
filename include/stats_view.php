@@ -1,5 +1,5 @@
 <?php include("../include/index.inc.php") ?>
-<?php include("../include/connect.inc.php") ?>
+<?php include("connect.inc.php") ?>
 
 <?php headHTML(); ?>
 
@@ -30,7 +30,7 @@ if (!isset($_GET["id"])) {
 
         <div class="container text-center mb-2 text-white">
             <?php
-            $foto = "SELECT Nombre FROM jugadores WHERE id=" . $_GET["id"];
+            $foto = "SELECT Nombre, Descripcion FROM jugadores WHERE id=" . $_GET["id"];
             $fotoTabla = $mysql->query($foto);
             while ($foto = $fotoTabla->fetch_assoc()) {
             ?>
@@ -38,7 +38,7 @@ if (!isset($_GET["id"])) {
                     <img src="../Imagenes/Alius/<?php echo $foto["Nombre"] ?>.png" alt="<?php echo $foto["Nombre"] ?> width=50%">
                     <div class="card-body">
                         <h4 class="card-title"><?php echo $foto["Nombre"] ?></h4>
-                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                        <p class="card-text"><?php echo $foto["Descripcion"] ?></p>
                     </div>
                 </div>
 
@@ -88,7 +88,6 @@ if (!isset($_GET["id"])) {
                             </tr>
                         <?php
                         }
-
                         ?>
                     </tbody>
                 </table>

@@ -11,6 +11,7 @@
     ?>
 
     <main>
+    <a href="../include/stats_add.php"class="btn btn-success mb-2 justify-content-center">Añadir</a>
         <div class="container d-flex justify-content-center">
             <div class="table-responsive">
                 <table class="table table-dark table-striped table-bordered text-center align-middle">
