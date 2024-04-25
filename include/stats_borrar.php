@@ -1,5 +1,5 @@
-<?php include ("../include/index.inc.php") ?>
-<?php include ("../include/connect.inc.php") ?>
+<?php include("../include/index.inc.php") ?>
+<?php include("../include/connect.inc.php") ?>
 
 <?php headHTML(); ?>
 
@@ -35,10 +35,10 @@ if (!isset($_GET["id"])) {
 
 
             while ($foto = $fotoTabla->fetch_assoc()) {
-                ?>
+            ?>
 
                 <img src="../Imagenes/Alius/<?php echo $foto["Nombre"] ?>.png" alt="<?php echo $foto["Nombre"] ?>">
-                <?php
+            <?php
             }
 
             ?>
@@ -67,7 +67,7 @@ if (!isset($_GET["id"])) {
                     <tbody>
                         <?php
                         while ($registro = $tabla->fetch_assoc()) {
-                            ?>
+                        ?>
                             <tr>
                                 <td> <?php echo $registro["Nombre"] ?> </td>
                                 <td> <?php echo $registro["Posición"] ?> </td>
@@ -82,16 +82,19 @@ if (!isset($_GET["id"])) {
                                 <td> <?php echo $registro["FÍSICO"] ?> </td>
                                 <td> <?php echo $registro["TOTAL"] ?> </td>
                             </tr>
-                            <?php
+                            
+                        <?php
                         }
-
                         ?>
                     </tbody>
                 </table>
             </div>
-
         </div>
 
+        <div class="container text-center">
+            <a href="../paginas/adminedit.php" class="btn btn-success">No. volver al listado de jugadores</a>
+            <a href="stats_sql.php?opcion=borrar&id=<?php echo $_GET["id"]; ?>" class="btn btn-danger">Si. Borrar este Jugador</a>
+        </div>
     </main>
 
 

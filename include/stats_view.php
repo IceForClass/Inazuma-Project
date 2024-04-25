@@ -1,5 +1,5 @@
-<?php include ("../include/index.inc.php") ?>
-<?php include ("../include/connect.inc.php") ?>
+<?php include("../include/index.inc.php") ?>
+<?php include("../include/connect.inc.php") ?>
 
 <?php headHTML(); ?>
 
@@ -28,20 +28,26 @@ if (!isset($_GET["id"])) {
 
     <main>
 
-        <div class="container mx-auto text-center mb-2">
+        <div class="container text-center mb-2 text-white">
             <?php
             $foto = "SELECT Nombre FROM jugadores WHERE id=" . $_GET["id"];
             $fotoTabla = $mysql->query($foto);
-
-
             while ($foto = $fotoTabla->fetch_assoc()) {
-                ?>
+            ?>
+                <div class="card mx-auto rounded" style="width:400px">
+                    <img src="../Imagenes/Alius/<?php echo $foto["Nombre"] ?>.png" alt="<?php echo $foto["Nombre"] ?> width=50%">
+                    <div class="card-body">
+                        <h4 class="card-title"><?php echo $foto["Nombre"] ?></h4>
+                        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+                    </div>
+                </div>
 
-                <img src="../Imagenes/Alius/<?php echo $foto["Nombre"] ?>.png" alt="<?php echo $foto["Nombre"] ?>">
-                <?php
+            <?php
             }
 
             ?>
+
+
 
         </div>
         <div class="container d-flex justify-content-center">
@@ -50,7 +56,6 @@ if (!isset($_GET["id"])) {
                     <thead>
                         <!--Cabeza de la tabla-->
                         <tr>
-                            <th scope="col">Nombre</a></th>
                             <th scope="col">Posición</a></th>
                             <th scope="col">Afinidad</a></th>
                             <th scope="col">Equipo</a></th>
@@ -67,9 +72,8 @@ if (!isset($_GET["id"])) {
                     <tbody>
                         <?php
                         while ($registro = $tabla->fetch_assoc()) {
-                            ?>
+                        ?>
                             <tr>
-                                <td> <?php echo $registro["Nombre"] ?> </td>
                                 <td> <?php echo $registro["Posición"] ?> </td>
                                 <td> <?php echo $registro["Afinidad"] ?> </td>
                                 <td> <?php echo $registro["Equipo"] ?> </td>
@@ -82,7 +86,7 @@ if (!isset($_GET["id"])) {
                                 <td> <?php echo $registro["FÍSICO"] ?> </td>
                                 <td> <?php echo $registro["TOTAL"] ?> </td>
                             </tr>
-                            <?php
+                        <?php
                         }
 
                         ?>

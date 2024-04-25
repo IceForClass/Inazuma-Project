@@ -17,7 +17,8 @@ create table jugadores(
     PRESIÓN	tinyint unsigned not null, 
     AGILIDAD tinyint unsigned not null, 	
     FÍSICO tinyint unsigned not null,
-    TOTAL int unsigned
+    TOTAL int unsigned,
+    Descripcion text
 );
 
 INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONTROL, INTELIGENCIA, PRESIÓN, AGILIDAD, FÍSICO, TOTAL) VALUES
@@ -35,6 +36,7 @@ INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONT
   ("Torch", "Delantero", "Fuego", "Prominence",184, 146, 132, 68, 78, 90, 102, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO),
   ("Xene", "Delantero", "Fuego", "Génesis",164, 118, 138, 104, 76, 98, 100, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO),
   ("Zell", "Delantero", "Aire", "Epsilon",148, 124, 116, 86, 84, 96, 108, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO),
+  ("Prueba", "Defensa", "Aire", "Prominence",66, 92, 112, 120, 152, 122, 96, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO),	 
   ("Zohen", "Defensa", "Montaña", "Génesis",68, 106, 90, 72, 166, 90, 128, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO);  
   
 select * from jugadores;
