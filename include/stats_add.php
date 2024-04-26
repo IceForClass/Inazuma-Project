@@ -27,8 +27,8 @@
                     <input type="text" class="form-control" id="Nombre" name="Nombre" required value="">
                 </div>
                 <div class="mb-3">
-                    <label for="posicion" class="form-label">Posición</label>
-                    <select class="form-select" id="posicion" name="posicion" required>
+                    <label for="Posición" class="form-label">Posición</label>
+                    <select class="form-select" id="Posición" name="Posición" required>
                         <option value="Delantero">Delantero</option>
                         <option value="Centrocampista">Centrocampista</option>
                         <option value="Defensa">Defensa</option>
@@ -36,8 +36,8 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="afinidad" class="form-label">Afinidad</label>
-                    <select class="form-select" id="afinidad" name="afinidad" required>
+                    <label for="Afinidad" class="form-label">Afinidad</label>
+                    <select class="form-select" id="Afinidad" name="Afinidad" required>
                         <option value="Fuego">Fuego</option>
                         <option value="Aire">Aire</option>
                         <option value="Bosque">Bosque</option>
