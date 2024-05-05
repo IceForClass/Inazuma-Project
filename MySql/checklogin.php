@@ -13,7 +13,7 @@
         $_SESSION["username"] = $usuario;
         header("location:../paginas/Stats.php");
     } else {
-        header("location:login.php?msg=loginmal");
+        header("location:../paginas/login.php?msg=loginmal");
     }
 
 
