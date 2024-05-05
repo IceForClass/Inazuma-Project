@@ -16,26 +16,26 @@
                         <div class="card-body p-md-5 mx-md-4">
           
                           <div class="text-center">
-                            <img src="/Imagenes/Logo.png"
+                            <img src="../Imagenes/Logo.png"
                               style="width: 155px;" alt="logo" class="bg-black rounded-circle">
                             <h4>Inazuma</h4>
                           </div>
 
-                          <form>
+                          <form method="POST" action="../MySql/checklogin.php">
                             <p>Regístrate con tu cuenta</p>
           
                             <div class="form-outline mb-3">
-                              <input type="email" id="form2Example11" class="form-control"/>
+                            <input type="text" class="form-control" id="usuario" name="usuario" value="">
                               <label class="form-label" for="form2Example11">Nombre De Usuario</label>
                             </div>
           
                             <div class="form-outline mb-3">
-                              <input type="password" id="form2Example22" class="form-control" />
+                            <input type="text" class="form-control" id="password" name="password" value="">
                               <label class="form-label" for="form2Example22">Contraseña</label>
                             </div>
           
                             <div class="text-center pt-1 pb-1">
-                              <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
+                              <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
                                 in</button>
                               <a class="text-muted" href="#!">¿Olvidaste tu contraseña?</a>
                             </div>

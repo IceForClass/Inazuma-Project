@@ -11,7 +11,7 @@
 
     if ($result -> num_rows == 1) {  
         $_SESSION["username"] = $usuario;
-        header("location:index.php");
+        header("location:../paginas/Stats.php");
     } else {
         header("location:login.php?msg=loginmal");
     }

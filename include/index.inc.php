@@ -21,7 +21,7 @@
   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
 
     <a href="#" class="d-flex align-items-center col-md-3 mb-2 mb-md-0">
-      <img src="../Imagenes/logo.png" alt="Logo" width="80" height="80">
+      <img src="Imagenes/logo.png" alt="Logo" width="80" height="80">
     </a>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -45,7 +45,7 @@
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <div class="col-md-4 d-flex align-items-center">
       <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0">
-        <img src="/Imagenes/logo.png" alt="Logo" width="80" height="80">
+        <img src="Imagenes/logo.png" alt="Logo" width="80" height="80">
       </a>
     </div>
     <div class="text-center">

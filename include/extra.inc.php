@@ -30,7 +30,7 @@
     </ul>
 
     <div class="col-md-3 text-end">
-      <a href="adminedit.php" class="btn btn-outline-primary me-2">Login</a>
+      <a href="login.php" class="btn btn-outline-primary me-2">Login</a>
       <a href="../paginas/signup.php" class="btn btn-outline-primary me-2">Sign-up</a>
     </div>
   </header>

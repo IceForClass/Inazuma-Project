@@ -1,6 +1,7 @@
-<?php include("../include/extra.inc.php") ?>
-<?php include("../include/connect.inc.php") ?>
-<?php // include("../include/stats.inc.php") ?>
+<?php include ("../include/extra.inc.php") ?>
+<?php include ("../include/connect.inc.php") ?>
+<?php // include("../include/stats.inc.php") 
+?>
 
 <?php headHTML(); ?>
 
@@ -8,6 +9,8 @@
     <?php headerHTML();
     $mysql = connectDB();
     // order($mysql); Esta cosa todavía no funciona así que no se puede refactorizar aún
+    session_start();
+
 
     if (!isset($_GET["orderby"])) {
         $consulta = "SELECT * FROM jugadores";
@@ -75,7 +78,7 @@
                     <thead>
                         <!--Cabeza de la tabla-->
                         <tr>
-                            <th scope="col">jugador</a></th>
+                            <th scope="col">Jugador</a></th>
                             <th scope="col"><a class="text-reset" href="Stats.php?orderby=nombre">Nombre</a></th>
                             <th scope="col"><a class="text-reset" href="Stats.php?orderby=posicion">Posición</a></th>
                             <th scope="col"><a class="text-reset" href="Stats.php?orderby=afinidad">Afinidad</a></th>
@@ -83,11 +86,13 @@
                             <th scope="col"><a class="text-reset" href="Stats.php?orderby=patada">PATADA</a></th>
                             <th scope="col"><a class="text-reset" href="Stats.php?orderby=tecnica">TÉCNICA</a></th>
                             <th scope="col"><a class="text-reset" href="Stats.php?orderby=control">CONTROL</a></th>
-                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=inteligencia">INTELIGENCIA</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=inteligencia">INTELIGENCIA</a>
+                            </th>
                             <th scope="col"><a class="text-reset" href="Stats.php?orderby=presion">PRESIÓN</a></th>
                             <th scope="col"><a class="text-reset" href="Stats.php?orderby=agilidad">AGILIDAD</a></th>
                             <th scope="col"><a class="text-reset" href="Stats.php?orderby=fisico">FÍSICO</a></th>
                             <th scope="col"><a class="text-reset" href="Stats.php?orderby=total">TOTAL</a></th>
+                            <th scope="col">Acciones</a></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -95,28 +100,40 @@
                         while ($registro = $tabla_equipos->fetch_assoc()) {
                             ?>
                             <tr>
-                            <td><img src="../Imagenes/Alius/<?php echo $registro["Nombre"] ?>.png" alt="<?php echo $registro["Nombre"] ?>" width=100% height=100%></td>
-                            <td> <?php echo $registro["Nombre"] ?> </td>
-                            <td> <?php echo $registro["Posición"] ?> </td>
-                            <td> <?php echo $registro["Afinidad"] ?> </td>
-                            <td> <?php echo $registro["Equipo"] ?> </td>
-                            <td> <?php echo $registro["PATADA"] ?> </td>
-                            <td> <?php echo $registro["TÉCNICA"] ?> </td>
-                            <td> <?php echo $registro["CONTROL"] ?> </td>
-                            <td> <?php echo $registro["INTELIGENCIA"] ?> </td>
-                            <td> <?php echo $registro["PRESIÓN"] ?> </td>
-                            <td> <?php echo $registro["AGILIDAD"] ?> </td>
-                            <td> <?php echo $registro["FÍSICO"] ?> </td>
-                            <td> <?php echo $registro["TOTAL"] ?> </td>
-                            <td>
-                                <div class="row container mx-auto">
-                                    <a href="../include/stats_view.php?id=<?php echo $registro["id"]?>"class="btn btn-primary mb-2">Ver</a>  
-                                </div>                                        
-                            </td>                                              
+                                <td><img src="../Imagenes/Alius/<?php echo $registro["Nombre"] ?>.png"
+                                        alt="<?php echo $registro["Nombre"] ?>" width=100% height=100%></td>
+                                <td> <?php echo $registro["Nombre"] ?> </td>
+                                <td> <?php echo $registro["Posición"] ?> </td>
+                                <td> <?php echo $registro["Afinidad"] ?> </td>
+                                <td> <?php echo $registro["Equipo"] ?> </td>
+                                <td> <?php echo $registro["PATADA"] ?> </td>
+                                <td> <?php echo $registro["TÉCNICA"] ?> </td>
+                                <td> <?php echo $registro["CONTROL"] ?> </td>
+                                <td> <?php echo $registro["INTELIGENCIA"] ?> </td>
+                                <td> <?php echo $registro["PRESIÓN"] ?> </td>
+                                <td> <?php echo $registro["AGILIDAD"] ?> </td>
+                                <td> <?php echo $registro["FÍSICO"] ?> </td>
+                                <td> <?php echo $registro["TOTAL"] ?> </td>
+                                <td>
+                                    <div class="row container mx-auto">
+                                        <a href="../include/stats_view.php?id=<?php echo $registro["id"] ?>"
+                                            class="btn btn-primary mb-2">Ver</a>
+                                        <?php
+                                        if (isset($_SESSION["username"])) {
+                                            ?>
+                                            <a href="../include/stats_update.php?id=<?php echo $registro["id"] ?>"
+                                                class="btn btn-warning mb-2">Editar</a>
+                                            <a href="../include/stats_borrar.php?id=<?php echo $registro["id"] ?>"
+                                                class="btn btn-danger">Borrar</a>
+                                            <?php
+                                        }
+                                        ?>
+                                    </div>
+                                </td>
                             </tr>
-                        <?php
+                            <?php
                         }
-                        
+
                         ?>
                     </tbody>
                 </table>
