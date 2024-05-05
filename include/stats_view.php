@@ -1,4 +1,4 @@
-<?php include("../include/index.inc.php") ?>
+<?php include("../include/extra.inc.php") ?>
 <?php include("connect.inc.php") ?>
 
 <?php headHTML(); ?>

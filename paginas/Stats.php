@@ -75,41 +75,49 @@
                     <thead>
                         <!--Cabeza de la tabla-->
                         <tr>
-                            <th scope="col"><a href="Stats.php?orderby=nombre">Nombre</a></th>
-                            <th scope="col"><a href="Stats.php?orderby=posicion">Posición</a></th>
-                            <th scope="col"><a href="Stats.php?orderby=afinidad">Afinidad</a></th>
-                            <th scope="col"><a href="Stats.php?orderby=equipo">Equipo</a></th>
-                            <th scope="col"><a href="Stats.php?orderby=patada">PATADA</a></th>
-                            <th scope="col"><a href="Stats.php?orderby=tecnica">TÉCNICA</a></th>
-                            <th scope="col"><a href="Stats.php?orderby=control">CONTROL</a></th>
-                            <th scope="col"><a href="Stats.php?orderby=inteligencia">INTELIGENCIA</a></th>
-                            <th scope="col"><a href="Stats.php?orderby=presion">PRESIÓN</a></th>
-                            <th scope="col"><a href="Stats.php?orderby=agilidad">AGILIDAD</a></th>
-                            <th scope="col"><a href="Stats.php?orderby=fisico">FÍSICO</a></th>
-                            <th scope="col"><a href="Stats.php?orderby=total">TOTAL</a></th>
+                            <th scope="col">jugador</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=nombre">Nombre</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=posicion">Posición</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=afinidad">Afinidad</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=equipo">Equipo</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=patada">PATADA</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=tecnica">TÉCNICA</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=control">CONTROL</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=inteligencia">INTELIGENCIA</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=presion">PRESIÓN</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=agilidad">AGILIDAD</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=fisico">FÍSICO</a></th>
+                            <th scope="col"><a class="text-reset" href="Stats.php?orderby=total">TOTAL</a></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <!--Cuerpo de la tabla-->
                         <?php
                         while ($registro = $tabla_equipos->fetch_assoc()) {
-                            echo "<tr>";
-                            echo "<td>" . $registro["Nombre"] . "</td>";
-                            echo "<td>" . $registro["Posición"] . "</td>";
-                            echo "<td>" . $registro["Afinidad"] . "</td>";
-                            echo "<td>" . $registro["Equipo"] . "</td>";
-                            echo "<td>" . $registro["PATADA"] . "</td>";
-                            echo "<td>" . $registro["TÉCNICA"] . "</td>";
-                            echo "<td>" . $registro["CONTROL"] . "</td>";
-                            echo "<td>" . $registro["INTELIGENCIA"] . "</td>";
-                            echo "<td>" . $registro["PRESIÓN"] . "</td>";
-                            echo "<td>" . $registro["AGILIDAD"] . "</td>";
-                            echo "<td>" . $registro["FÍSICO"] . "</td>";
-                            echo "<td>" . $registro["TOTAL"] . "</td>";
-                            echo "</tr>";
+                            ?>
+                            <tr>
+                            <td><img src="../Imagenes/Alius/<?php echo $registro["Nombre"] ?>.png" alt="<?php echo $registro["Nombre"] ?>" width=100% height=100%></td>
+                            <td> <?php echo $registro["Nombre"] ?> </td>
+                            <td> <?php echo $registro["Posición"] ?> </td>
+                            <td> <?php echo $registro["Afinidad"] ?> </td>
+                            <td> <?php echo $registro["Equipo"] ?> </td>
+                            <td> <?php echo $registro["PATADA"] ?> </td>
+                            <td> <?php echo $registro["TÉCNICA"] ?> </td>
+                            <td> <?php echo $registro["CONTROL"] ?> </td>
+                            <td> <?php echo $registro["INTELIGENCIA"] ?> </td>
+                            <td> <?php echo $registro["PRESIÓN"] ?> </td>
+                            <td> <?php echo $registro["AGILIDAD"] ?> </td>
+                            <td> <?php echo $registro["FÍSICO"] ?> </td>
+                            <td> <?php echo $registro["TOTAL"] ?> </td>
+                            <td>
+                                <div class="row container mx-auto">
+                                    <a href="../include/stats_view.php?id=<?php echo $registro["id"]?>"class="btn btn-primary mb-2">Ver</a>  
+                                </div>                                        
+                            </td>                                              
+                            </tr>
+                        <?php
                         }
+                        
                         ?>
-
                     </tbody>
                 </table>
             </div>

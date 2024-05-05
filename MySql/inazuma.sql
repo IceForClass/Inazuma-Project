@@ -21,6 +21,15 @@ create table jugadores(
     Descripcion text
 );
 
+create table usuarios (
+	id int auto_increment not null primary key,
+	username varchar(45),
+    password varchar(45)
+);
+
+INSERT INTO usuarios(username, password) VALUES
+  ("Ice", md5("1234"));
+
 INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONTROL, INTELIGENCIA, PRESIÓN, AGILIDAD, FÍSICO, TOTAL, Descripcion ) VALUES
   ("Bomber", "Defensa", "Aire", "Prominence",66, 92, 112, 120, 152, 122, 96, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "Un jugador que irradia un entusiasmo ardiente. Es excepcionalmente minucioso con su cinta para la cabeza."),
   ("Bellatrix", "Delantero", "Aire", "Génesis", 136, 158, 106, 112, 114, 88, 86, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "Una guerrera capaz de tomar decisiones tranquilas y calculadas en cualquier momento. Sus acciones nunca se ven influidas por sus emociones."),
