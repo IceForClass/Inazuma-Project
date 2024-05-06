@@ -40,8 +40,7 @@
                       </div>
 
                       <div class="text-center pt-1 pb-1">
-                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
-                          in</button>
+                        <button class="btn btn-primary btn-block fa-lg mb-3" type="submit" style=" background: linear-gradient(to right, #d8363a, rgb(5, 9, 252));">Login</button>
                         <a class="text-muted" href="#!">¿Olvidaste tu contraseña?</a>
                       </div>
 
@@ -54,7 +53,7 @@
 
                   </div>
                 </div>
-                <div class="col-lg-6 d-flex align-items-center gradient-custom-2 text-center">
+                <div class="col-lg-6 d-flex align-items-center text-center" style="background: linear-gradient(to right, #d8363a, rgb(5, 9, 252));">
                   <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                     <h4 class="mb-4">¡Bienvenido al mundo de inazuma!</h4>
                   </div>

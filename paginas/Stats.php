@@ -9,7 +9,6 @@
     <?php headerHTML();
     $mysql = connectDB();
     // order($mysql); Esta cosa todavía no funciona así que no se puede refactorizar aún
-    session_start();
 
 
     if (!isset($_GET["orderby"])) {

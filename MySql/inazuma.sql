@@ -28,7 +28,9 @@ create table usuarios (
 );
 
 INSERT INTO usuarios(username, password) VALUES
-  ("Ice", md5("1234"));
+  ("Ice", md5("1234")),
+  ("Cliente", md5("1234"));
+
 
 INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONTROL, INTELIGENCIA, PRESIÓN, AGILIDAD, FÍSICO, TOTAL, Descripcion ) VALUES
   ("Bomber", "Defensa", "Aire", "Prominence",66, 92, 112, 120, 152, 122, 96, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "Un jugador que irradia un entusiasmo ardiente. Es excepcionalmente minucioso con su cinta para la cabeza."),
@@ -45,7 +47,6 @@ INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONT
   ("Torch", "Delantero", "Fuego", "Prominence",184, 146, 132, 68, 78, 90, 102, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "Un delantero de sangre caliente y agresivo. Sus tiros abrasadores dejan un rastro de ceniza a su paso"),
   ("Xene", "Delantero", "Fuego", "Génesis",164, 118, 138, 104, 76, 98, 100, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "El guerrero definitivo, nacido del proyecto Génesis. Sus tiros vuelan como cometas"),
   ("Zell", "Delantero", "Aire", "Epsilon",148, 124, 116, 86, 84, 96, 108, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "Confía plenamente un su propia habilidad y culpa a los que le rodean cuandolas cosas van mal."),
-  ("Prueba", "Defensa", "Aire", "Prominence",66, 92, 112, 120, 152, 122, 96, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "Es Solo una prueba"),	 
   ("Zohen", "Defensa", "Montaña", "Génesis",68, 106, 90, 72, 166, 90, 128, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "Bloquea la escuadra con el enorme físico que ha desarrollado gracias a las artes marciales.");  
 
 
