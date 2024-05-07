@@ -42,11 +42,11 @@
       } else {
         ?>
         <a href="../paginas/login.php" class="btn btn-outline-primary me-2">Login</a>
+        <a href="../paginas/signup.php" class="btn btn-outline-primary me-2">Sign-up</a>
         <?php
 
       }
       ?>
-      <a href="../paginas/signup.php" class="btn btn-outline-primary me-2">Sign-up</a>
     </div>
   </header>
 

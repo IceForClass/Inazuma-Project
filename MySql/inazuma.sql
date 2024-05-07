@@ -50,4 +50,20 @@ INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONT
   ("Zohen", "Defensa", "Montaña", "Génesis",68, 106, 90, 72, 166, 90, 128, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "Bloquea la escuadra con el enorme físico que ha desarrollado gracias a las artes marciales.");  
 
 
+INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONTROL, INTELIGENCIA, PRESIÓN, AGILIDAD, FÍSICO, TOTAL, Descripcion ) VALUES
+  ("Tori", "Centrocampista", "Aire", "Servicio Secreto",104, 114, 120, 94, 116, 106, 66, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
+  ("Aitor", "Defensa", "Bosque", "Raimon Go",110 ,102 ,110 ,92 ,142 ,101 ,98 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
+  ("Bailong", "Delantero", "Aire", "Luz Eterna",184 ,128 ,148 ,108 ,74 ,96 ,62 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
+  ("Caleb", "Centrocampista", "Fuego", "Royal Academy Redux",122 ,152 ,122 ,92 ,124 ,94 ,92 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
+  ("Erik", "Centrocampista", "Bosque", "Raimon",128 ,144 ,124 ,90 ,108 ,84 ,82 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
+  ("Haizaki", "Delantero", "Bosque", "Raimon Orion", 168, 72, 86, 82, 134, 120, 138, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
+  ("Kevin", "Delantero", "Bosque", "Servicio Secreto", 156, 88, 110,72 ,74 ,86 ,134 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
+  ("Riccardo", "Centrocampista", "Bosque", "Raimon Go",116 ,140 ,126 ,118 ,112 ,104 ,88 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
+  ("Samguk", "Portero", "Fuego", "Raimon Go",64 ,82 ,104 ,96 ,110 ,158 ,108 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
+  ("Scotty", "Defensa", "Bosque", "Claustro Sagrado",76 ,108 ,128 ,118 ,152 ,78 ,102 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
+  ("Sue", "Delantero", "Bosque", "Triple C",142 ,106 ,108 ,102 ,86 ,86 ,88 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
+  ("Tezcat", "Delantero", "Bosque", "Equipo Zero",176 ,136 ,126 ,78 ,114 ,98 ,72 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
+  ("Zanark", "Delantero", "Montaña", "Zanark Domain",170 ,118 ,134 ,46 ,100 ,98 ,136 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, ".");
+
+
 select * from jugadores;
