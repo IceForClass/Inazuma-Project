@@ -28,7 +28,7 @@
       <li><a href="equipos.php" class="nav-link px-2 link-light">Equipos</a></li>
       <li><a href="Stats.php" class="nav-link px-2 link-light">Stats</a></li>
       <li><a href="#" class="nav-link px-2 link-light">FAQs</a></li>
-      <li><a href="#" class="nav-link px-2 link-light">About</a></li>
+      <li><a href="../paginas/InaChat.php" class="nav-link px-2 link-light">InaChat</a></li>
     </ul>
     <?php
     session_start();
