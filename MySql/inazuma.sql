@@ -4,6 +4,28 @@ create database inazuma;
 
 use inazuma;
 
+create table usuarios (
+	id int auto_increment not null primary key,
+	username varchar(45),
+    password varchar(45)
+);
+
+
+create table equipos (
+	id int primary key auto_increment not null,
+    Nombre varchar(35) not null
+);
+
+create table clan (
+	id int primary key auto_increment not null,
+    Nombre varchar(35) not null
+);
+
+create table torneo (
+	id int primary key auto_increment not null,
+    Nombre varchar(35) not null
+);
+
 create table jugadores(
 	id int primary key auto_increment not null,
     Nombre varchar(35) not null,
@@ -21,11 +43,7 @@ create table jugadores(
     Descripcion text
 );
 
-create table usuarios (
-	id int auto_increment not null primary key,
-	username varchar(45),
-    password varchar(45)
-);
+
 
 INSERT INTO usuarios(username, password) VALUES
   ("Ice", md5("1234")),
