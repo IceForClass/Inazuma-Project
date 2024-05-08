@@ -10,7 +10,6 @@ create table usuarios (
     password varchar(45)
 );
 
-
 create table equipos (
 	id int primary key auto_increment not null,
     Nombre varchar(35) not null
@@ -43,13 +42,12 @@ create table jugadores(
     Descripcion text
 );
 
-
-
 INSERT INTO usuarios(username, password) VALUES
   ("Ice", md5("1234")),
   ("Cliente", md5("1234"));
 
 
+-- Alius
 INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONTROL, INTELIGENCIA, PRESIÓN, AGILIDAD, FÍSICO, TOTAL, Descripcion ) VALUES
   ("Bomber", "Defensa", "Aire", "Prominence",66, 92, 112, 120, 152, 122, 96, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "Un jugador que irradia un entusiasmo ardiente. Es excepcionalmente minucioso con su cinta para la cabeza."),
   ("Bellatrix", "Delantero", "Aire", "Génesis", 136, 158, 106, 112, 114, 88, 86, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "Una guerrera capaz de tomar decisiones tranquilas y calculadas en cualquier momento. Sus acciones nunca se ven influidas por sus emociones."),
@@ -67,7 +65,7 @@ INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONT
   ("Zell", "Delantero", "Aire", "Epsilon",148, 124, 116, 86, 84, 96, 108, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "Confía plenamente un su propia habilidad y culpa a los que le rodean cuandolas cosas van mal."),
   ("Zohen", "Defensa", "Montaña", "Génesis",68, 106, 90, 72, 166, 90, 128, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "Bloquea la escuadra con el enorme físico que ha desarrollado gracias a las artes marciales.");  
 
-
+-- Campeones nacionales
 INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONTROL, INTELIGENCIA, PRESIÓN, AGILIDAD, FÍSICO, TOTAL, Descripcion ) VALUES
   ("Tori", "Centrocampista", "Aire", "Servicio Secreto",104, 114, 120, 94, 116, 106, 66, PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
   ("Aitor", "Defensa", "Bosque", "Raimon Go",110 ,102 ,110 ,92 ,142 ,101 ,98 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
@@ -82,6 +80,8 @@ INSERT INTO jugadores(Nombre, Posición, Afinidad, Equipo,PATADA, TÉCNICA, CONT
   ("Sue", "Delantero", "Bosque", "Triple C",142 ,106 ,108 ,102 ,86 ,86 ,88 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
   ("Tezcat", "Delantero", "Bosque", "Equipo Zero",176 ,136 ,126 ,78 ,114 ,98 ,72 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, "."),
   ("Zanark", "Delantero", "Montaña", "Zanark Domain",170 ,118 ,134 ,46 ,100 ,98 ,136 , PATADA+TÉCNICA+CONTROL+INTELIGENCIA+PRESIÓN+AGILIDAD+FÍSICO, ".");
+
+-- Inazuma All stars
 
 
 select * from jugadores;
